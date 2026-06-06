@@ -2,12 +2,12 @@ package day_6;
 
 public class Dynamic_link_list {
 	
-	
+
 		public static void main(String[] args) {
 			SinglyLinkedListDemo linkedList=new SinglyLinkedListDemo();
 			linkedList.insertAtBegining(10);
 			linkedList.insertAtBegining(80);
-			 linkedList.insertAtASpecificPosition(50, 2);
+			 linkedList.insertAtASpecificPosition(2,-70);//check code
 			linkedList.insertAtEnd(100);
 			linkedList.insertAtEnd(30);
 			linkedList.traverseSinglyList();
@@ -52,17 +52,21 @@ public class Dynamic_link_list {
 			
 		}
 		
-		public void insertAtASpecificPosition(int data, int position) {
+		public void insertAtASpecificPosition(int index , int data) {
 	        LinkedNode newNode = new LinkedNode(data);
-	        if (position == 0) {
-	            newNode.next = head;
-	            head = newNode;
-	            return;
-	        }
 	        LinkedNode temp_ref = head;
-	        for (int i = 0; temp_ref != null && i < position - 1; i++) {
+	        
+	        
+	        if(index==0) {
+	        	newNode.next=newNode;
+	        	newNode=head;
+	        	return;
+	        	
+	        }
+	        for (int counter = 0; counter < index-1; counter++) {
 	            temp_ref = temp_ref.next;
 	        }
+	        newNode.next=temp_ref.next;
 	        temp_ref.next = newNode;
 	}
 		

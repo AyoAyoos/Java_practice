@@ -19,7 +19,7 @@ public class middle_of_list {
     }
 }
 
-// Node Class
+
 class MyNode {
 
     int data;
@@ -31,12 +31,12 @@ class MyNode {
     }
 }
 
-// Linked List Class
+
 class MyLinkedList {
 
     MyNode head;
 
-    // Insert at End
+    
     public void insertAtEnd(int data) {
 
         MyNode newNode = new MyNode(data);
@@ -55,7 +55,7 @@ class MyLinkedList {
         temp.next = newNode;
     }
 
-    // Display Linked List
+    
     public void display() {
 
         if (head == null) {
@@ -73,7 +73,7 @@ class MyLinkedList {
         System.out.println("null");
     }
 
-    // Find Middle Node
+    
     public void findMiddle() {
 
         if (head == null) {

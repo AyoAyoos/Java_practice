@@ -1,6 +1,8 @@
 package day_7;
 
 import java.util.Hashtable;
+import java.util.Map.Entry;
+import java.util.Set;
 
 public class Hash_map {
 	
@@ -15,6 +17,17 @@ public class Hash_map {
 		
 		
 		System.out.println("hashtable" + hashTableObj);
+		
+		
+		
+		
+		Set<Entry<Integer, String>> entrySet=  hashTableObj.entrySet();
+
+		
+		
+		for(Entry<Integer, String> entry: entrySet) {
+			System.out.println(entry.getValue());
+		}
 		
 	}
 

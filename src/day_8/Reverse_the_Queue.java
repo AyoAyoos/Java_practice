@@ -24,16 +24,16 @@ public class Reverse_the_Queue {
 		
 		System.out.println(queueObj);
 		
-		// removal
+		
 		
 		Stack<Integer> stack = new Stack<>();
 
-        // Step 1: Move queue -> stack
+        
         while (!queueObj.isEmpty()) {
             stack.push(queueObj.poll());
         }
 
-        // Step 2: Move stack -> queue
+       
         while (!stack.isEmpty()) {
             queueObj.offer(stack.pop());
         }

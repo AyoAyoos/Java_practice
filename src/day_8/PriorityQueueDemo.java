@@ -1,21 +1,31 @@
 package day_8;
 
+
 import java.util.PriorityQueue;
+import java.util.Comparator;
 
 public class PriorityQueueDemo {
 
     public static void main(String[] args) {
+    	
+    	   PriorityQueue<Integer> priorityQueue = new PriorityQueue<>(new Comparator<Integer>() {
 
-        PriorityQueue<Integer> priorityQueue = new PriorityQueue<>();
+               @Override
+               public int compare(Integer a, Integer b) {
+                   return b - a;   // Descending order
+               }
+           });
 
-        priorityQueue.offer(10);
-        priorityQueue.offer(50);
-        priorityQueue.offer(60);
-        priorityQueue.offer(3);
-        priorityQueue.offer(7);
-        priorityQueue.offer(9);
-        priorityQueue.offer(15);
+           priorityQueue.offer(10);
+           priorityQueue.offer(50);
+           priorityQueue.offer(60);
+           priorityQueue.offer(3);
+           priorityQueue.offer(7);
+           priorityQueue.offer(9);
+           priorityQueue.offer(15);
 
-        System.out.println(priorityQueue);
-    }
-}
+           while (!priorityQueue.isEmpty()) {
+               System.out.print(priorityQueue.poll() + " ");
+           }
+       }
+   }
